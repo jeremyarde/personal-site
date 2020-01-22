@@ -54,7 +54,7 @@ class NavigationBar extends React.Component {
                 partiallyActive={false}
                 style={{ textDecoration: "none", color: "black" }}
               >
-                Jeremy Arde's R&D
+                Jeremy R&D
               </Link>
             </Typography>
             <Link to="/" style={styles.links}>
