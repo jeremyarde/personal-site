@@ -5,7 +5,7 @@ export default function About(props) {
   return (
     <div>
       <NavigationBar />
-      <div>some stuff</div>
+      <div>About page</div>
     </div>
   );
 }
