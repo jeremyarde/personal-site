@@ -9,8 +9,15 @@ module.exports = {
         // stylesProvider: {
         //   injectFirst: true,
         // },
-      },
+      }
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-156902943-1"
+      }
+    }
+
     // If you want to use styled components you should add the plugin here.
     // 'gatsby-plugin-styled-components',
   ],
@@ -19,6 +26,6 @@ module.exports = {
     defaultDescription: "Jeremy's personal site and portfolio",
     siteUrl: "https://www.jeremyrd.dev",
     defaultImage: "",
-    twitterUsername: "@username",
-  },
-}
+    twitterUsername: "@username"
+  }
+};
