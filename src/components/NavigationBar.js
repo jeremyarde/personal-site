@@ -5,6 +5,7 @@ import { Link } from "gatsby";
 import Button from "@material-ui/core/Button";
 import GithubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import TwitterIcon from "@material-ui/icons/Twitter";
 import EmailButton from "./EmailButton";
 
 const email = "jere.arde@gmail.com";
@@ -79,6 +80,11 @@ class NavigationBar extends React.Component {
             >
               <Button style={styles.button}>
                 <GithubIcon />
+              </Button>
+            </a>
+            <a target="twitterTab" href="https://twitter.com/jeremyarde">
+              <Button style={styles.button}>
+                <TwitterIcon />
               </Button>
             </a>
           </Toolbar>
