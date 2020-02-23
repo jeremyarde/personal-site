@@ -1,6 +1,9 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   plugins: [
-    // "gatsby-plugin-top-layout",
     `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-material-ui",
@@ -15,6 +18,17 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-156902943-1"
+      }
+    },
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: `GitHub`,
+        fieldName: `github`,
+        url: `https://api.github.com/graphql`,
+        headers: {
+          Authorization: `Bearer ${process.env.GATSBY_GITHUB_TOKEN}`
+        }
       }
     }
 

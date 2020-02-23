@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import axios from "axios";
 import NavigationBar from "../components/NavigationBar";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -12,6 +14,9 @@ const useStyles = makeStyles({
   card: {
     minWidth: 275
   },
+  // button: {
+  //   color: "black"
+  // },
   bullet: {
     display: "inline-block",
     margin: "0 2px",
@@ -25,66 +30,87 @@ const useStyles = makeStyles({
   }
 });
 
+function CreateCard(repository, classes) {
+  const bull = <span className={classes.bullet}>•</span>;
+  console.log("Repo:");
+  console.log(repository);
+  console.log(repository.url);
+  return (
+    <Card className={classes.card}>
+      <CardContent>
+        <Typography
+          className={classes.title}
+          color="textSecondary"
+          gutterBottom
+        >
+          {repository.nameWithOwner}
+        </Typography>
+        <Typography variant="h5" component="h2">
+          {repository.name}
+        </Typography>
+        <Typography variant="body2" component="p">
+          {repository.description}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <a target="linkedinTab" href={repository.url}>
+          <Button>Learn More</Button>
+        </a>
+      </CardActions>
+    </Card>
+  );
+}
+
 export default function Project(props) {
+  const gatsbyRepoData = useStaticQuery(graphql`
+    query {
+      github {
+        user(login: "jeremyaRD") {
+          pinnedItems(first: 6) {
+            totalCount
+            edges {
+              node {
+                ... on GitHub_Repository {
+                  name
+                  description
+                  nameWithOwner
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+  // var projects = []
+  // for (var x in gatsbyRepoData.gatsbyRepoData.github.user.pinnedItems){
+  //   var project = new Object();
+
+  // }
+
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
+  console.log(gatsbyRepoData.github);
+  console.log(gatsbyRepoData.github.user.pinnedItems);
   return (
     <div>
       <NavigationBar />
       <Typography style={{ fontSize: 50 }}>Projects</Typography>
-      <Box display="flex">
-        <Card className={classes.card}>
-          <CardContent>
-            <Typography
-              className={classes.title}
-              color="textSecondary"
-              gutterBottom
-            >
-              Word of the Day
-            </Typography>
-            <Typography variant="h5" component="h2">
-              be{bull}nev{bull}o{bull}lent
-            </Typography>
-            <Typography className={classes.pos} color="textSecondary">
-              adjective
-            </Typography>
-            <Typography variant="body2" component="p">
-              well meaning and kindly.
-              <br />
-              {'"a benevolent smile"'}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small">Learn More</Button>
-          </CardActions>
-        </Card>
-        <Card className={classes.card}>
-          <CardContent>
-            <Typography
-              className={classes.title}
-              color="textSecondary"
-              gutterBottom
-            >
-              Word of the Day
-            </Typography>
-            <Typography variant="h5" component="h2">
-              be{bull}nev{bull}o{bull}lent
-            </Typography>
-            <Typography className={classes.pos} color="textSecondary">
-              adjective
-            </Typography>
-            <Typography variant="body2" component="p">
-              well meaning and kindly.
-              <br />
-              {'"a benevolent smile"'}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small">Learn More</Button>
-          </CardActions>
-        </Card>
-      </Box>
+
+      <Grid
+        container
+        direction="column"
+        justify="center"
+        alignItems="center"
+        layout="auto"
+      >
+        {CreateCard(
+          gatsbyRepoData.github.user.pinnedItems.edges[0].node,
+          classes
+        )}
+      </Grid>
     </div>
   );
 }
