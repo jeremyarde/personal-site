@@ -18,8 +18,9 @@
     "@material-ui/core": "^4.8.3",
     "@material-ui/icons": "^4.5.1",
     "axios": "^0.19.2",
-    "gatsby": "^2.18.12",
     "gatsby-plugin-google-analytics": "^2.1.34",
+    "gatsby": "^2.19.12",
+    "gatsby-plugin-gtag": "^1.0.12",
     "gatsby-plugin-material-ui": "latest",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-source-graphql": "^2.1.33",
@@ -34,9 +35,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/jeremyaRD/personal-site"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/jeremyaRD/personal-site/issues"
   }
 }

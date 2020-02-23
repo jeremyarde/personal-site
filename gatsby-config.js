@@ -4,7 +4,23 @@ require("dotenv").config({
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        // your google analytics tracking id
+        trackingIds: ["UA-156902943-1"],
+        // Puts tracking script in the head instead of the body
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+          anonymize: true
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-react-helmet`
+    },
+    // "gatsby-plugin-top-layout",
     {
       resolve: "gatsby-plugin-material-ui",
       // If you want to use styled components you should change the injection order.
@@ -12,12 +28,6 @@ module.exports = {
         // stylesProvider: {
         //   injectFirst: true,
         // },
-      }
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-156902943-1"
       }
     },
     {
@@ -31,15 +41,12 @@ module.exports = {
         }
       }
     }
-
-    // If you want to use styled components you should add the plugin here.
-    // 'gatsby-plugin-styled-components',
   ],
   siteMetadata: {
     defaultTitle: "Jeremy Personal Site",
     defaultDescription: "Jeremy's personal site and portfolio",
     siteUrl: "https://www.jeremyrd.dev",
     defaultImage: "",
-    twitterUsername: "@username"
+    twitterUsername: "@jeremyarde"
   }
 };
