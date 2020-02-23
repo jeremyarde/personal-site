@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"16l3":function(e,n,t){"use strict";t.r(n),t.d(n,"default",(function(){return u}));var a=t("q1tI"),l=t.n(a),r=t("BoQL");function u(e){return l.a.createElement("div",null,l.a.createElement(r.a,null),l.a.createElement("div",null,"Projects page"))}}}]);
+//# sourceMappingURL=component---src-pages-projects-js-f2b49c79f6e51c4dfc95.js.map
