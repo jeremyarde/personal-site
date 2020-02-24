@@ -8,15 +8,10 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Box } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
+import ListItem from "@material-ui/core/ListItem";
 
 const useStyles = makeStyles({
-  card: {
-    minWidth: 275
-  },
-  // button: {
-  //   color: "black"
-  // },
   bullet: {
     display: "inline-block",
     margin: "0 2px",
@@ -27,37 +22,44 @@ const useStyles = makeStyles({
   },
   pos: {
     marginBottom: 12
+  },
+  repoCards: {
+    minWidth: 275,
+    borderRadius: "15px",
+    background: "#e6e6e6",
+    boxShadow: "30px 30px 60px #d9d9d9, -30px -30px 60px #ffffff",
+    marginBottom: "40px"
   }
 });
 
 function CreateCard(repository, classes) {
   const bull = <span className={classes.bullet}>•</span>;
-  console.log("Repo:");
-  console.log(repository);
-  console.log(repository.url);
+  // const classes = useStyles();
   return (
-    <Card className={classes.card}>
-      <CardContent>
-        <Typography
-          className={classes.title}
-          color="textSecondary"
-          gutterBottom
-        >
-          {repository.nameWithOwner}
-        </Typography>
-        <Typography variant="h5" component="h2">
-          {repository.name}
-        </Typography>
-        <Typography variant="body2" component="p">
-          {repository.description}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <a target="linkedinTab" href={repository.url}>
-          <Button>Learn More</Button>
-        </a>
-      </CardActions>
-    </Card>
+    <ListItem key={repository.name}>
+      <Card className={classes.repoCards}>
+        <CardContent>
+          <Typography
+            className={classes.title}
+            color="textSecondary"
+            gutterBottom
+          >
+            {repository.nameWithOwner}
+          </Typography>
+          <Typography variant="h5" component="h2">
+            {repository.name}
+          </Typography>
+          <Typography variant="body2" component="p">
+            {repository.description}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <a target="linkedinTab" href={repository.url}>
+            <Button>Learn More</Button>
+          </a>
+        </CardActions>
+      </Card>
+    </ListItem>
   );
 }
 
@@ -83,34 +85,30 @@ export default function Project(props) {
       }
     }
   `);
-  // var projects = []
-  // for (var x in gatsbyRepoData.gatsbyRepoData.github.user.pinnedItems){
-  //   var project = new Object();
-
-  // }
 
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
+  const projects = [];
 
-  console.log(gatsbyRepoData.github);
-  console.log(gatsbyRepoData.github.user.pinnedItems);
+  gatsbyRepoData.github.user.pinnedItems.edges.forEach(element => {
+    projects.push(CreateCard(element.node, classes));
+  });
+
   return (
     <div>
       <NavigationBar />
-      <Typography style={{ fontSize: 50 }}>Projects</Typography>
+      <Typography style={{ fontSize: 50, marginBottom: 20 }}>
+        Projects
+      </Typography>
 
-      <Grid
-        container
+      <Container
+        // container
         direction="column"
         justify="center"
-        alignItems="center"
         layout="auto"
+        spacing={2}
       >
-        {CreateCard(
-          gatsbyRepoData.github.user.pinnedItems.edges[0].node,
-          classes
-        )}
-      </Grid>
+        {projects}
+      </Container>
     </div>
   );
 }

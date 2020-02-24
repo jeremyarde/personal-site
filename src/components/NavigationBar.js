@@ -9,7 +9,6 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import EmailButton from "./EmailButton";
 
 const email = "jere.arde@gmail.com";
-// const currentPage = "Home";
 export const styles = {
   root: {
     flexGrow: 1
@@ -22,6 +21,7 @@ export const styles = {
     color: "black"
   },
   appBar: {
+    // from https://neumorphism.io/#55b9f3
     borderRadius: "15px",
     background: "#EFEEEE",
     boxShadow: "30px 30px 60px #cbcaca, -30px -30px 60px #ffffff",
