@@ -22,7 +22,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-helmet`
     },
-    // "gatsby-plugin-top-layout",
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography.js`
+      }
+    },
     {
       resolve: "gatsby-plugin-material-ui",
       // If you want to use styled components you should change the injection order.

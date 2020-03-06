@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     transform: "scale(0.8)"
   },
   title: {
-    fontSize: 14
+    // fontSize: 14
   },
   pos: {
     marginBottom: 12

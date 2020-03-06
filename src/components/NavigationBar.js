@@ -21,10 +21,10 @@ export const styles = {
     color: "black"
   },
   appBar: {
-    // from https://neumorphism.io/#55b9f3
-    borderRadius: "15px",
+    //   // from https://neumorphism.io/#55b9f3
+    //   borderRadius: "15px",
     background: "#EFEEEE",
-    boxShadow: "30px 30px 60px #cbcaca, -30px -30px 60px #ffffff",
+    //   boxShadow: "30px 30px 60px #cbcaca, -30px -30px 60px #ffffff",
     marginBottom: "40px"
   },
   button: {
@@ -49,15 +49,15 @@ class NavigationBar extends React.Component {
       <div style={{ flexGrow: 1 }}>
         <AppBar position="static" style={styles.appBar}>
           <Toolbar>
-            <Typography variant="h6" style={styles.title}>
+            <header variant="h6" style={styles.title}>
               <Link
                 to="/"
                 partiallyActive={false}
                 style={{ textDecoration: "none", color: "black" }}
               >
-                Jeremy R&D
+                jeremy arde
               </Link>
-            </Typography>
+            </header>
             <Link to="/" style={styles.links}>
               <Button style={styles.button}>Home</Button>
             </Link>
