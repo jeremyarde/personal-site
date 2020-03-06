@@ -18,7 +18,9 @@ export const styles = {
   },
   title: {
     flexGrow: 1,
-    color: "black"
+    color: "black",
+
+    marginLeft: 50
   },
   appBar: {
     //   // from https://neumorphism.io/#55b9f3
@@ -53,7 +55,10 @@ class NavigationBar extends React.Component {
               <Link
                 to="/"
                 partiallyActive={false}
-                style={{ textDecoration: "none", color: "black" }}
+                style={{
+                  textDecoration: "none",
+                  color: "black"
+                }}
               >
                 jeremy arde
               </Link>
@@ -64,9 +69,9 @@ class NavigationBar extends React.Component {
             <Link to="/projects" style={styles.links}>
               <Button style={styles.button}>Projects</Button>
             </Link>
-            <Link to="/about" style={styles.links}>
+            {/* <Link to="/about" style={styles.links}>
               <Button style={styles.button}>About</Button>
-            </Link>
+            </Link> */}
             <EmailButton email={email} />
             <a target="linkedinTab" href="https://www.linkedin.com/in/j-arde/">
               <Button style={styles.button}>

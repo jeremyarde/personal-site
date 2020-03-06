@@ -16,7 +16,7 @@ class Application extends React.Component {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
-          <title>Jeremy R&D</title>
+          <title>Jeremy Arde</title>
           <link rel="canonical" href="http://jeremyrd.dev" />{" "}
         </Helmet>
         <NavigationBar />
