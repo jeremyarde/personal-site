@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import axios from "axios";
 import NavigationBar from "../components/NavigationBar";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
 import { Container, Grid } from "@material-ui/core";
 import ListItem from "@material-ui/core/ListItem";
 
@@ -17,8 +15,9 @@ const useStyles = makeStyles({
     margin: "0 2px",
     transform: "scale(0.8)"
   },
-  title: {
-    // fontSize: 14
+  repoTitle: {
+    // fontSize: 14,
+    color: "#616161"
   },
   pos: {
     marginBottom: 12
@@ -33,25 +32,18 @@ const useStyles = makeStyles({
 });
 
 function CreateCard(repository, classes) {
-  const bull = <span className={classes.bullet}>•</span>;
-  // const classes = useStyles();
   return (
-    <ListItem key={repository.name}>
+    <ListItem
+      // height={100}
+      // width={400}
+      style={{ justifyContent: "center" }}
+      key={repository.name}
+    >
       <Card className={classes.repoCards}>
         <CardContent>
-          <Typography
-            className={classes.title}
-            color="textSecondary"
-            gutterBottom
-          >
-            {repository.nameWithOwner}
-          </Typography>
-          <Typography variant="h5" component="h2">
-            {repository.name}
-          </Typography>
-          <Typography variant="body2" component="p">
-            {repository.description}
-          </Typography>
+          <h4 className={classes.repoTitle}>{repository.nameWithOwner}</h4>
+          <h2>{repository.name}</h2>
+          <body>{repository.description}</body>
         </CardContent>
         <CardActions>
           <a target="linkedinTab" href={repository.url}>
@@ -94,15 +86,12 @@ export default function Project(props) {
   });
 
   return (
-    <div>
+    <div style={{ alignContent: "center" }}>
       <NavigationBar />
-      <Typography style={{ fontSize: 50, marginBottom: 20 }}>
-        Projects
-      </Typography>
-
+      <h3 style={{ display: "flex", justifyContent: "center" }}>Projects</h3>
       <Container
         // container
-        direction="column"
+        // direction="column"
         justify="center"
         layout="auto"
         spacing={2}

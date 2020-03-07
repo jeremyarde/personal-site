@@ -20,8 +20,30 @@ class Application extends React.Component {
           <link rel="canonical" href="http://jeremyrd.dev" />{" "}
         </Helmet>
         <NavigationBar />
-        <Container>
-          <Typography>I am no front end dev, forgive me :)</Typography>
+        <Container
+          style={{
+            justifyContent: true,
+            textAlign: "center",
+            margin: "auto",
+            marginTop: 50
+          }}
+        >
+          <div
+            style={{ maxWidth: 600, margin: "auto", justifyContent: "center" }}
+          >
+            <h1 style={{ textAlign: "center" }}>Hi, I'm Jeremy.</h1>
+            <h3>
+              I'm a developer passionate about building smart solutions to
+              everyday problems using AI.
+            </h3>
+            <hr></hr>
+            <h4>Current interests include:</h4>
+            <li>Deep Learning</li>
+            <li>Python</li>
+            <li>Rust</li>
+            <li>Microservices</li>
+            <li>Kubernetes</li>
+          </div>
         </Container>
       </div>
     );
