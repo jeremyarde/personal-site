@@ -16,22 +16,6 @@ import EmailButton from "./EmailButton";
 import { Container } from "@material-ui/core";
 const email = "jere.arde@gmail.com";
 export const styles = {
-  root: {
-    flexGrow: 1
-  },
-  container: {
-    // flex: 1,
-    // justifyContent: "center",
-    // alignItems: "center"
-  },
-  menuButton: {
-    // marginRight: theme.spacing(2)
-  },
-  title: {
-    flexGrow: 1,
-    color: "black",
-    margin: "auto"
-  },
   appBar: {
     background: "#f7f7f7",
     justifyContent: "center",
@@ -76,7 +60,9 @@ class NavigationBar extends React.Component {
             <h3
               style={{
                 // alignSelf: "center",
+                // marginLeft: "-100px"
                 margin: "auto"
+                // flex:
               }}
             >
               jeremy arde
@@ -84,7 +70,7 @@ class NavigationBar extends React.Component {
           </Link>
           <Link to="/projects" style={styles.links}>
             <Button>
-              <h4 style={styles.title}>Projects</h4>
+              <h4 style={{ margin: "auto" }}>Projects</h4>
             </Button>
           </Link>
           <EmailButton email={email} />
