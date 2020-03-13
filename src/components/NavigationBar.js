@@ -46,53 +46,63 @@ class NavigationBar extends React.Component {
           container
           direction="row"
           justify="space-evenly"
+          flex
           alignItems="center"
         >
-          <Link
-            to="/"
-            partiallyActive={false}
-            style={{
-              textDecoration: "none",
-              color: "black",
-              margin: "auto"
-            }}
-          >
-            <h3
+          <Grid item xs={6}>
+            <Link
+              to="/"
+              partiallyActive={false}
               style={{
-                // alignSelf: "center",
-                // marginLeft: "-100px"
-                margin: "auto"
-                // flex:
+                textDecoration: "none",
+                color: "black"
               }}
             >
-              jeremy arde
-            </h3>
-          </Link>
-          <Link to="/projects" style={styles.links}>
-            <Button>
-              <h4 style={{ margin: "auto" }}>Projects</h4>
-            </Button>
-          </Link>
-          <EmailButton email={email} />
-          <a target="linkedinTab" href="https://www.linkedin.com/in/j-arde/">
-            <Button style={styles.button}>
-              <LinkedInIcon />
-            </Button>
-          </a>
-          <a
-            target="githubTab"
-            href="https://github.com/jeremyaRD"
-            style={styles.links}
-          >
-            <Button style={styles.button}>
-              <GithubIcon />
-            </Button>
-          </a>
-          <a target="twitterTab" href="https://twitter.com/jeremyarde">
-            <Button style={styles.button}>
-              <TwitterIcon />
-            </Button>
-          </a>
+              <h3
+                style={{
+                  margin: "auto",
+                  textAlign: "left"
+                }}
+              >
+                jeremy arde
+              </h3>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link to="/projects" style={styles.links}>
+              <Button>
+                <h4 style={{ margin: "auto" }}>Projects</h4>
+              </Button>
+            </Link>
+          </Grid>
+          <Grid item>
+            <EmailButton email={email} />
+          </Grid>
+          <Grid>
+            <a target="linkedinTab" href="https://www.linkedin.com/in/j-arde/">
+              <Button style={styles.button}>
+                <LinkedInIcon />
+              </Button>
+            </a>
+          </Grid>
+          <Grid item>
+            <a
+              target="githubTab"
+              href="https://github.com/jeremyaRD"
+              style={styles.links}
+            >
+              <Button style={styles.button}>
+                <GithubIcon />
+              </Button>
+            </a>
+          </Grid>
+          <Grid item>
+            <a target="twitterTab" href="https://twitter.com/jeremyarde">
+              <Button style={styles.button}>
+                <TwitterIcon />
+              </Button>
+            </a>
+          </Grid>
         </Grid>
       </Container>
     );
