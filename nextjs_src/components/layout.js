@@ -3,8 +3,8 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
-const name = "Jeremy";
-export const siteTitle = "Next.js Sample Website";
+const name = "JEREMY ARDE";
+export const siteTitle = "Some title you got here";
 
 export default function Layout({ children, home }) {
   return (
@@ -17,7 +17,11 @@ export default function Layout({ children, home }) {
         <meta property="og:url" content="https://jeremyrd.dev" />
         <meta property="og:title" content="Jeremy Arde - Ramblings" />
         <meta property="og:image" content="public\images\face.jpg" />
-        <title>This is my title</title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        ></link>
+        <title>{siteTitle}</title>
       </Head>
       <header className={styles.header}>
         {home ? (
@@ -27,7 +31,10 @@ export default function Layout({ children, home }) {
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             /> */}
+            {/* <div> */}
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <Link href="/posts">Posts</Link>
+            {/* </div> */}
           </>
         ) : (
           <>
@@ -58,7 +65,19 @@ export default function Layout({ children, home }) {
       )}
       <div>
         <footer>
-          <hr></hr>Jeremy footer
+          <hr></hr>
+          <a
+            href="https://twitter.com/jeremyarde"
+            target="_blank"
+            class="fa fa-twitter fa-2x"
+          ></a>
+          |
+          <a
+            href="https://github.com/jeremyaRD/"
+            target="_blank"
+            class="fa fa-github fa-2x"
+          ></a>
+          |<a href="jere.arde@gmail.com">jere.arde@gmail.com</a>
         </footer>
       </div>
     </div>

@@ -32,3 +32,14 @@ img {
   /* width: 200; */
   display: block;
 }
+
+footer {
+  flex: auto;
+  margin: auto;
+}
+
+footer > a {
+  /* padding-inline-start: 2em; */
+  /* margin-right: 2rem; */
+  padding: 0 10px 0px 10px;
+}

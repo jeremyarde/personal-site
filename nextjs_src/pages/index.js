@@ -18,15 +18,25 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
-      <Head>…</Head>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          I'm a developer passionate about building smart solutions to everyday
-          problems using AI.
-        </p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          Hello, I am a technologist focused on creating simple solutions to
+          everyday problems. My current areas of interest include natural
+          language processing (NLP),{" "}
+          <a
+            href="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)"
+            target="_blank"
+          >
+            transformer language models
+          </a>{" "}
+          and the{" "}
+          <a href="https://www.rust-lang.org/" target="_blank">
+            Rust programming language
+          </a>
+          .
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
