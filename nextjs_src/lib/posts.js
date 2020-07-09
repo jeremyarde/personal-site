@@ -50,6 +50,10 @@ export function getAllPostIds() {
   });
 }
 
+export function getTagData() {
+  return [{ id: "Tag1" }, { id: "Tag2" }];
+}
+
 export function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);

@@ -5,36 +5,33 @@ import Head from "next/head";
 import Date from "../../components/date";
 // import utilStyles from "../../styles/utils.module.css";
 import utilStyles from "../../styles/utils.module.css";
-import { getSortedPostsData } from "../../lib/posts";
+import { getTagData } from "../../lib/posts";
 import Link from "next/link";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allTagsData = getTagData();
   return {
     props: {
-      allPostsData,
+      allTagsData,
     },
   };
 }
 
-export default function Posts({ allPostsData }) {
+export default function Posts({ allTagsData }) {
   return (
     <Layout>
       <Head>
-        <title>Jeremy Arde - Posts</title>
+        <title>Jeremy Arde - Tags</title>
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Posts</h2>
+        <h2 className={utilStyles.headingLg}>Tags</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
+          {allTagsData.map(({ id }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href="/posts/[id]" as={`/posts/${id}`}>
-                <a>{title}</a>
+              <Link href="/tags/[id]" as={`/tags/${id}`}>
+                <a>{id}</a>
               </Link>
               <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
             </li>
           ))}
         </ul>

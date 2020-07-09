@@ -3,7 +3,7 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
-const name = "JEREMY ARDE";
+const name = "Jeremy Arde";
 export const siteTitle = "Some title you got here";
 
 export default function Layout({ children, home }) {
@@ -24,36 +24,19 @@ export default function Layout({ children, home }) {
         <title>{siteTitle}</title>
       </Head>
       <header className={styles.header}>
-        {home ? (
-          <>
-            {/* <img
-              src="/images/face.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            /> */}
-            {/* <div> */}
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-            <Link href="/posts">Posts</Link>
-            {/* </div> */}
-          </>
-        ) : (
-          <>
-            {/* <Link href="/">
-              <a>
-                <img
-                  src="/images/face.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link> */}
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
+        <h2 className={utilStyles.headingXl}>
+          <Link href="/">
+            <a className={utilStyles.colorInherit}>{name}</a>
+          </Link>{" "}
+        </h2>
+        <nav>
+          <Link href="/posts">
+            <a className={styles.nav}>Posts</a>
+          </Link>
+          <Link href="/tags">
+            <a className={styles.nav}>Tags</a>
+          </Link>
+        </nav>
       </header>
       <main>{children}</main>
       {!home && (
