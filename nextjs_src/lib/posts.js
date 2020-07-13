@@ -4,7 +4,10 @@ import matter from "gray-matter";
 import remark from "remark";
 import html from "remark-html";
 
-const postsDirectory = path.join(process.cwd(), "posts");
+const postsDirectory = path.join(
+  "C:\\Users\\Jeremy\\OneDrive\\Notes\\",
+  "Website Posts"
+);
 
 export async function getPostData(id) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
