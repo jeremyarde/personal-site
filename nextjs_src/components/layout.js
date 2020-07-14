@@ -4,7 +4,7 @@ import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
 const name = "Jeremy Arde";
-export const siteTitle = "Some title you got here";
+export const siteTitle = "Jeremy Arde";
 
 export default function Layout({ children, home }) {
   return (
@@ -33,9 +33,9 @@ export default function Layout({ children, home }) {
           <Link href="/posts">
             <a className={styles.nav}>Posts</a>
           </Link>
-          <Link href="/tags">
+          {/* <Link href="/tags">
             <a className={styles.nav}>Tags</a>
-          </Link>
+          </Link> */}
         </nav>
       </header>
       <main>{children}</main>
@@ -52,13 +52,13 @@ export default function Layout({ children, home }) {
           <a
             href="https://twitter.com/jeremyarde"
             target="_blank"
-            class="fa fa-twitter fa-2x"
+            class="fa fa-twitter"
           ></a>
           |
           <a
             href="https://github.com/jeremyaRD/"
             target="_blank"
-            class="fa fa-github fa-2x"
+            class="fa fa-github"
           ></a>
           |<a href="jere.arde@gmail.com">jere.arde@gmail.com</a>
         </footer>

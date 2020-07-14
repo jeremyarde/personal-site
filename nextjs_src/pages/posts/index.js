@@ -1,5 +1,5 @@
 // import Layout from "../../components/layout";
-import Layout from "../../components/layout";
+import Layout, { siteTitle } from "../../components/layout";
 // import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
@@ -7,6 +7,8 @@ import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
 import { getSortedPostsData } from "../../lib/posts";
 import Link from "next/link";
+
+const pageTitle = "Posts";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -21,10 +23,12 @@ export default function Posts({ allPostsData }) {
   return (
     <Layout>
       <Head>
-        <title>Jeremy Arde - Posts</title>
+        <title>
+          {siteTitle} {" - Posts "}
+        </title>
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Posts</h2>
+        <h2 className={utilStyles.headingXLg}>{pageTitle}</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
