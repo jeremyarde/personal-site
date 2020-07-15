@@ -56,7 +56,7 @@ export default function Layout({ children, home }) {
           ></a>
           |
           <a
-            href="https://github.com/jeremyaRD/"
+            href="https://github.com/jeremyarde/"
             target="_blank"
             className="fa fa-github"
           ></a>
