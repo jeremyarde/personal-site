@@ -2,8 +2,6 @@ import Layout, { siteTitle } from "../../components/layout";
 import Head from "next/head";
 import Date from "../../components/date";
 import styles from "./index.module.css";
-// import styles from "../../styles/global.css";
-// import utilStyles from "../../styles/utils.module.css";
 
 import { getSortedPostsData } from "../../lib/posts";
 import Link from "next/link";

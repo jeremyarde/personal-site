@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
+import styles from "./index.module.css";
 import Link from "next/link";
 import Date from "../components/date";
 
@@ -21,7 +21,9 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      {/* <section className={styles.headingMd}>
+       */}
+      <section>
         <p>
           Hello, I am a technologist focused on creating simple solutions to
           everyday problems. My current areas of interest include natural
@@ -39,16 +41,16 @@ export default function Home({ allPostsData }) {
           .
         </p>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Recent Posts </h2>
-        <ul className={utilStyles.list}>
+      <section className={`${styles.headingMd} ${styles.padding1px}`}>
+        <h2 className={styles.headingLg}>Recent Posts </h2>
+        <ul className={styles.list}>
           {allPostsData.slice(0, 5).map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
+            <li className={styles.listItem} key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <small className={styles.lightText}>
                 <Date dateString={date} />
               </small>
             </li>
