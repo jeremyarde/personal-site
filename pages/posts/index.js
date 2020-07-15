@@ -1,10 +1,10 @@
-// import Layout from "../../components/layout";
 import Layout, { siteTitle } from "../../components/layout";
-// import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
+import styles from "./index.module.css";
+// import styles from "../../styles/global.css";
 // import utilStyles from "../../styles/utils.module.css";
-import utilStyles from "../../styles/utils.module.css";
+
 import { getSortedPostsData } from "../../lib/posts";
 import Link from "next/link";
 
@@ -27,16 +27,16 @@ export default function Posts({ allPostsData }) {
           {siteTitle} {" - Posts "}
         </title>
       </Head>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingXLg}>{pageTitle}</h2>
-        <ul className={utilStyles.list}>
+      <section className={`${styles.headingMd} ${styles.padding1px}`}>
+        <h2 className={styles.headingXLg}>{pageTitle}</h2>
+        <ul className={styles.list}>
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
+            <li className={styles.listItem} key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <small className={styles.lightText}>
                 <Date dateString={date} />
               </small>
             </li>

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
+// import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
 const name = "Jeremy Arde";
@@ -24,9 +24,9 @@ export default function Layout({ children, home }) {
         <title>{siteTitle}</title>
       </Head>
       <header className={styles.header}>
-        <h2 className={utilStyles.headingXl}>
+        <h2 className={styles.headingXl}>
           <Link href="/">
-            <a className={utilStyles.colorInherit}>{name}</a>
+            <a className={styles.colorInherit}>{name}</a>
           </Link>{" "}
         </h2>
         <nav>
@@ -52,13 +52,13 @@ export default function Layout({ children, home }) {
           <a
             href="https://twitter.com/jeremyarde"
             target="_blank"
-            class="fa fa-twitter"
+            className="fa fa-twitter"
           ></a>
           |
           <a
             href="https://github.com/jeremyaRD/"
             target="_blank"
-            class="fa fa-github"
+            className="fa fa-github"
           ></a>
           |<a href="jere.arde@gmail.com">jere.arde@gmail.com</a>
         </footer>
