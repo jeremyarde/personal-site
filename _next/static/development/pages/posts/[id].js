@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\posts\\[id].js"],{
 
 /***/ "./components/date.js":
 /*!****************************!*\
@@ -18832,21 +18832,21 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CJeremy%5CDocuments%5CCode%5Cpersonal-site%5Cpages%5Cindex.js!./":
-/*!****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CJeremy%5CDocuments%5CCode%5Cpersonal-site%5Cpages%5Cindex.js ***!
-  \****************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fposts%2F%5Bid%5D&absolutePagePath=C%3A%5CUsers%5CJeremy%5CDocuments%5CCode%5Cpersonal-site%5Cpages%5Cposts%5C%5Bid%5D.js!./":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fposts%2F%5Bid%5D&absolutePagePath=C%3A%5CUsers%5CJeremy%5CDocuments%5CCode%5Cpersonal-site%5Cpages%5Cposts%5C%5Bid%5D.js ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var mod = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/posts/[id]", function() {
+      var mod = __webpack_require__(/*! ./pages/posts/[id].js */ "./pages/posts/[id].js")
       if(true) {
-        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
-          if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
-          next.router.update("/", updatedPage)
+        module.hot.accept(/*! ./pages/posts/[id].js */ "./pages/posts/[id].js", function() {
+          if(!next.router.components["/posts/[id]"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/posts/[id].js */ "./pages/posts/[id].js")
+          next.router.update("/posts/[id]", updatedPage)
         })
       }
       return mod
@@ -23282,173 +23282,98 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./pages/posts/[id].js":
+/*!*****************************!*\
+  !*** ./pages/posts/[id].js ***!
+  \*****************************/
 /*! exports provided: __N_SSG, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__N_SSG", function() { return __N_SSG; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Post; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
-/* harmony import */ var _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/utils.module.css */ "./styles/utils.module.css");
-/* harmony import */ var _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_utils_module_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_date__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/date */ "./components/date.js");
-var _jsxFileName = "C:\\Users\\Jeremy\\Documents\\Code\\personal-site\\pages\\index.js";
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/layout */ "./components/layout.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_date__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/date */ "./components/date.js");
+/* harmony import */ var _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../styles/utils.module.css */ "./styles/utils.module.css");
+/* harmony import */ var _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_utils_module_css__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "C:\\Users\\Jeremy\\Documents\\Code\\personal-site\\pages\\posts\\[id].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-
 var __N_SSG = true;
-function Home(_ref) {
-  var _this = this;
-
-  var allPostsData = _ref.allPostsData;
-  return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    home: true,
+function Post(_ref) {
+  var postData = _ref.postData;
+  return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 9,
       columnNumber: 5
     }
-  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 10,
       columnNumber: 7
     }
   }, __jsx("title", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 11,
       columnNumber: 9
     }
-  }, _components_layout__WEBPACK_IMPORTED_MODULE_2__["siteTitle"])), __jsx("section", {
-    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.headingMd,
+  }, postData.title)), __jsx("article", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 13,
       columnNumber: 7
     }
-  }, __jsx("p", {
+  }, __jsx("h1", {
+    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_4___default.a.headingXl,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 14,
       columnNumber: 9
     }
-  }, "Hello, I am a technologist focused on creating simple solutions to everyday problems. My current areas of interest include natural language processing (NLP),", " ", __jsx("a", {
-    href: "https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)",
-    target: "_blank",
+  }, postData.title), __jsx("div", {
+    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_4___default.a.lightText,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 15,
+      columnNumber: 9
+    }
+  }, __jsx(_components_date__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    dateString: postData.date,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
       columnNumber: 11
     }
-  }, "transformer language models"), " ", "and the", " ", __jsx("a", {
-    href: "https://www.rust-lang.org/",
-    target: "_blank",
+  })), __jsx("div", {
+    dangerouslySetInnerHTML: {
+      __html: postData.contentHtml
+    },
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 11
-    }
-  }, "Rust programming language"), ".")), __jsx("section", {
-    className: "".concat(_styles_utils_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.headingMd, " ").concat(_styles_utils_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.padding1px),
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42,
-      columnNumber: 7
-    }
-  }, __jsx("h2", {
-    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.headingLg,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 18,
       columnNumber: 9
     }
-  }, "Recent Posts "), __jsx("ul", {
-    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.list,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44,
-      columnNumber: 9
-    }
-  }, allPostsData.slice(0, 5).map(function (_ref2) {
-    var id = _ref2.id,
-        date = _ref2.date,
-        title = _ref2.title;
-    return __jsx("li", {
-      className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.listItem,
-      key: id,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 46,
-        columnNumber: 13
-      }
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
-      href: "/posts/[id]",
-      as: "/posts/".concat(id),
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 47,
-        columnNumber: 15
-      }
-    }, __jsx("a", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 48,
-        columnNumber: 17
-      }
-    }, title)), __jsx("br", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 50,
-        columnNumber: 15
-      }
-    }), __jsx("small", {
-      className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.lightText,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 51,
-        columnNumber: 15
-      }
-    }, __jsx(_components_date__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      dateString: date,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 52,
-        columnNumber: 17
-      }
-    })));
-  }))));
+  })));
 }
 
 /***/ }),
@@ -23514,14 +23439,14 @@ if (true) {
 
 /***/ }),
 
-/***/ 2:
-/*!********************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CJeremy%5CDocuments%5CCode%5Cpersonal-site%5Cpages%5Cindex.js ***!
-  \********************************************************************************************************************************************/
+/***/ 1:
+/*!***********************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fposts%2F%5Bid%5D&absolutePagePath=C%3A%5CUsers%5CJeremy%5CDocuments%5CCode%5Cpersonal-site%5Cpages%5Cposts%5C%5Bid%5D.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CJeremy%5CDocuments%5CCode%5Cpersonal-site%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CJeremy%5CDocuments%5CCode%5Cpersonal-site%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fposts%2F%5Bid%5D&absolutePagePath=C%3A%5CUsers%5CJeremy%5CDocuments%5CCode%5Cpersonal-site%5Cpages%5Cposts%5C%5Bid%5D.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fposts%2F%5Bid%5D&absolutePagePath=C%3A%5CUsers%5CJeremy%5CDocuments%5CCode%5Cpersonal-site%5Cpages%5Cposts%5C%5Bid%5D.js!./");
 
 
 /***/ }),
@@ -23537,5 +23462,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=index.js.map
+},[[1,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=[id].js.map
