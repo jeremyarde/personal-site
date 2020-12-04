@@ -60,7 +60,7 @@ export default function Layout({ children, home }) {
             target="_blank"
             className="fa fa-github"
           ></a>
-          |<a href="jere.arde@gmail.com">jere.arde@gmail.com</a>
+          |<a href="mailto:jere.arde@gmail.com">jere.arde@gmail.com</a>
         </footer>
       </div>
     </div>
