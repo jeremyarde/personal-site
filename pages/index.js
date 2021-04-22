@@ -38,16 +38,16 @@ export default function Home({ allPostsData }) {
           .
         </p>
       </section>
-      <section className={`${styles.headingMd} ${styles.padding1px}`}>
-        <h2 className={styles.headingLg}>Recent Posts</h2>
-        <ul className={styles.list}>
+      <section className="headingMd padding1px">
+        <h2 className="headingLg">Recent Posts</h2>
+        <ul className="list">
           {allPostsData.slice(0, 5).map(({ id, date, title }) => (
-            <li className={styles.listItem} key={id}>
+            <li className="listItem" key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
-              <small className={styles.lightText}>
+              <small className="lightText">
                 <Date dateString={date} />
               </small>
             </li>
