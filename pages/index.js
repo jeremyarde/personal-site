@@ -26,14 +26,11 @@ export default function Home({ allPostsData }) {
       <section>
         <p>
           Hello, I am a technologist focused on creating simple solutions to
-          everyday problems. My current areas of interest include natural
+          everyday problems.
+        </p>
+        <p>My current areas of interest include natural
           language processing (NLP),{" "}
-          <a
-            href="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)"
-            target="_blank"
-          >
-            transformer language models
-          </a>{" "}
+          low resource machine leaning
           and the{" "}
           <a href="https://www.rust-lang.org/" target="_blank">
             Rust programming language
@@ -42,7 +39,7 @@ export default function Home({ allPostsData }) {
         </p>
       </section>
       <section className={`${styles.headingMd} ${styles.padding1px}`}>
-        <h2 className={styles.headingLg}>Recent Posts </h2>
+        <h2 className={styles.headingLg}>Recent Posts</h2>
         <ul className={styles.list}>
           {allPostsData.slice(0, 5).map(({ id, date, title }) => (
             <li className={styles.listItem} key={id}>
