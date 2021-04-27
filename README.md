@@ -6,7 +6,7 @@
 ## Referrences
 
 - https://github.com/rdela/kokodokai
-- 
+- https://megzari.com/blog/about_this_site
 
 
 ## INFO

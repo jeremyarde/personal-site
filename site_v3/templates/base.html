@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+        <meta charset="utf-8">
+        <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+        <meta name="description" content="{% block description %}Vincent Prouillet homepage{% endblock description %}">
+        <link rel="stylesheet" href="{{ get_url(path="site.css") }}" />
+        <link rel="icon" href="/favicon-32x32.png" />
+        <link rel="shortcut icon" type="image/png" href="{{ get_url(path="favicon.ico") }}"/>
+        <link href="{{ get_url(path="rss.xml") }}" rel="feed" type="application/rss+xml" title="{{ config.title }}" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@jeremyarde" />
+		<meta name="twitter:creator" content="@jeremyarde" />
+		<meta property="og:url" content="https://jeremyrd.dev" />
+		<meta property="og:title" content="Jeremy Arde - Ramblings" />
+		<meta property="og:image" content="public\images\face.jpg" />
+	</head>
+    <div class="container">
+	<header class="header">
+		<h2 class="headingXl">
+			<a href="/" class="colorInherit">{name}</a>
+			{' '}
+		</h2>
+		<nav>
+			<a class="nav" href="/posts"> Posts </a>
+		</nav>
+	</header>
+	<body>
+        {% block content %} {% endblock %}
+    </body>
+	<div>
+		<div>
+			<footer>
+				<hr />
+				<a href="https://github.com/jeremyarde/" target="_blank" class="fa fa-github">github</a>
+				|
+				<a href="https://twitter.com/jeremyarde" target="_blank" class="fa fa-twitter">twitter</a>
+				|
+				<a href="mailto:jere.arde@gmail.com">jere.arde@gmail.com</a>
+			</footer>
+		</div>
+	</div>
+</div>
+</div>
+</html>

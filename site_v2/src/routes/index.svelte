@@ -1,16 +1,24 @@
 <script>
-	// var fm = require('front-matter');
-
 	const posts = import.meta.glob('./posts/*.md');
+	let body = [];
+	let post_data;
 
 	for (const path in posts) {
-		posts[path]().then((mod) => {
-			console.log(path, mod);
-		});
+		body.push(posts[path]().then(({ metadata }) => metadata));
 	}
+	/**
+	 * @type {import('@sveltejs/kit').Load}
+	 */
+	export async function load({ page, fetch }) {
+		console.log(body);
+		const posts = await Promise.all(body);
 
-	console.log('posts', posts);
-
+		return {
+			props: {
+				posts
+			}
+		};
+	}
 	// console.log(fm(posts[0]));
 </script>
 
@@ -37,5 +45,6 @@
           </small>
         </li>
       ))} -->
+		{post_data}
 	</ul>
 </section>

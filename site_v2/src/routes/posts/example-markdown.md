@@ -1,3 +1,12 @@
+---
+
+title: example markdown title
+tag: [{ name: 'Svelte Kit', link: 'https://kit.svelte.dev/' }]
+# outline, slug
+---
+
+
+
 **Note that despite this file having an md extension, it can support all Svelte language features (like scripting). Do not import untrusted or user-created markdown files.**
 
 *This markdown sample was taken from [here](https://gist.github.com/rt2zz/e0a1d6ab2682d2c47746950b84c0b6ee).*
