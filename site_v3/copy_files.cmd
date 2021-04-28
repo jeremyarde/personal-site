@@ -1,1 +1,0 @@
-xcopy /s "C:\Users\Jeremy\OneDrive\Notes\Website Posts" C:\Users\Jeremy\Documents\Code\personal-site\site_v3\content\posts\ /Y
