@@ -8,7 +8,8 @@
 - https://www.matuzo.at/blog/html-boilerplate/
 - https://github.com/rdela/kokodokai
 - https://megzari.com/blog/about_this_site
-
+- favicon generator
+  - https://realfavicongenerator.net/
 
 ## INFO
 
