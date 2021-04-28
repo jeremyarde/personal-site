@@ -26,3 +26,8 @@
 copy "C:\Users\Jeremy\OneDrive\Notes\Website Posts" "."  "C:\Users\Jeremy\Documents\Code\personal-site\site_v2\content"
 
 xcopy /s "C:\Users\Jeremy\OneDrive\Notes\Website Posts" C:\Users\Jeremy\Documents\Code\personal-site\site_v2\content 
+
+
+## Deploy
+
+Github pages is setup to deploy the website on every commit
