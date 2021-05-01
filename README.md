@@ -31,3 +31,13 @@ xcopy /s "C:\Users\Jeremy\OneDrive\Notes\Website Posts" C:\Users\Jeremy\Document
 ## Deploy
 
 Github pages is setup to deploy the website on every commit
+
+## local 
+
+zola serve
+
+
+## Making sure things are good
+
+- https://observatory.mozilla.org/analyze/jeremyarde.com
+- https://web.dev/measure/
