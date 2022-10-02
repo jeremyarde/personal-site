@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jeremyarde.com/sitemap.xml
